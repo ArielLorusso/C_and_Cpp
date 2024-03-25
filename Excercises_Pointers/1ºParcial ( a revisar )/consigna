@@ -1,0 +1,29 @@
+Escribir un programa que se invoque pasándole como argumento por lista de comandos dos datos:
+
+El programa administrará una lista doblemente enlazada con los alumnos de un curso,
+conteniendo los siguientes campos:
+Apellido: string alfabética ASCIIZ.
+Nombres: string alfabética ASCIIZ.
+Legajo: string ASCIIZ de formato nn-nnnnnn-n, donde n es '0' a '9'.
+Calificación: numerico entero.
+
+Se pide: 
+
+Escribir: el código de la aplicación que permita a través de un menú simple, las siguientes
+operaciones en cualquier momento
+
+
+  ingresar: los datos por teclado para un registro completo de un alumno, 
+
+  borrar: un registro (con detección de lista vacía), listar de manera tabulada los
+diferentes registros 
+
+  ordenar: la lista por apellido 
+
+  contar: la cantidad de registros y presentar el resultado en pantalla 
+
+  calcular: la cantidad de alumnos que tengan mas de 6, entre 4 y 6, y menos de 4 y presentar el 
+resultado en pantalla.
+
+  Cuando el usuario selecciona la opción Finalizar, se sale del código borrando la lista y 
+liberando lamemoria.

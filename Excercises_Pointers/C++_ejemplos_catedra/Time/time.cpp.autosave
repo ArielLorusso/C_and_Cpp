@@ -1,0 +1,14 @@
+#include "time.h"
+
+time::time()
+{
+    private:
+        int sec;
+        int min;
+        int hour;
+    
+    public:
+        time();
+        time(int sec, char s);
+        
+}

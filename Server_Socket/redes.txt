@@ -1,0 +1,53 @@
+conexiones de red:
+
+		  proveedor Isp(INternet Service Provited) 
+				    |								     	
+computadora -------------->router-------> www (Word Wide Web) Internet----------> servidores(Paginas)---->preceso del servidor
+			   IP/TCP					    |
+	Internet Protocol(Identificar redes 32 bits)			Navegador      
+
+	
+el preceso del servidor se obtiene atravez de un soket canal virtual de comunicaciones bidimencional (mas eficiente que una ProssesID)
+
+cliente:---- crea socket	   ---- ip
+	|			   |
+	|-- se conecta un server --|---	servicio port (de 1024 en adelante un numero de 16bis )
+	|  
+	|-- read() write()
+
+server:----- crea socket		  
+	|						
+	|-- publicar ip: port				
+	|					  	
+	|-- esperar conexiones o pedir resultado---------
+	      \						|
+	       ------------------------------------------
+codigo server:
+      |
+      |---sockets()
+      |
+      |---bind()
+      |
+      |---listen()
+      |
+      ----Accept()
+
+para ver IP de pc: sudo ifconfig   IP de Internet(www.myip.com)
+
+eth0  = eternet Interfaz cableada 	direcciónHW distinta para cada equipo
+      Direc. inet: Direccion IP-->si es que esta conectada
+      
+Lo    = loopback (Logica)
+      
+      
+wlan0 = Wifi				direcciónHW distinta para cada equipo distinta a la eth0
+       Direc. inet: Direccion IP-->si es que esta conectada
+
+       La pila OSI:
+capa 7) aplicacion
+capa 6) presentacion
+capa 5) servicios DNS Nombres de las paginas
+capa 4)	transporte TCP
+capa 3) red (IP protocolo Unico sistema de numeracion)
+capa 2) enlace ()
+capa 1) fisico (placa de red, drivers ,interacion fisico-so.)
