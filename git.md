@@ -1,5 +1,16 @@
+# GIT 
+
+Git is an Open Source , version control system  (VCS)
+that is available for free under the GNU License
+it allows developers to track changes to their code.
+
+# GIT HELP
+
+git help   lets use see the commands , each command has its manual 
+
 ```sh
 $ git help
+```
 
 usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
@@ -7,58 +18,198 @@ usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
            [--super-prefix=<path>] [--config-env=<name>=<envvar>]
            <command> [<args>]
-```
-# These are common Git commands used in various situations:
+##  git commands 
+   list of commands shown by `git help`
+
+## START REPOSITORY 
+Start  a working area (see also: git help tutorial)
+   `clone`     Clone a repository into a new directory
+   `init`      Create an empty Git repository or reinitialize an existing one
+   `config`    Set user name, email, system, etc... 
+      git config --global user.email "you@example.com"
+      git config --global user.name "Your Name"
+
+## WORK   
+Work on the current change (see also: `git help everyday`)
+   `add`       Add file contents to the index
+   `mv`        Move or rename a file, a directory, or a symlink
+   `restore`   Restore working tree files
+   `rm`        Remove files from the working tree and from the index
+
+## EXAMINE 
+Examine the history and state (see also: git help revisions)
+   `log`       Show commit logs
+   `bisect`    Use binary search to find the commit that introduced a bug
+   `diff`      Show changes between commits, commit and working tree, etc
+   `grep`      Print lines matching a pattern
+   `show`      Show various types of objects
+   `status`    Show the working tree status
+
+## EDIT
+Grow mark and tweak your common history
+   `commit`    Record changes to the repository
+   `branch`    List, create, or delete branches
+   `switch`    Switch branches
+   `merge`     Join two or more development histories together
+   `reset`     Reset current HEAD to the specified state
+   `rebase`    Reapply commits on top of another base tip
+   `tag`       Create, list, delete or verify a tag object signed with GPG
+
+## WORKFLOW
+collaborate in a workflow (see also: `git help workflows`)
+   `fetch`       Download objects and refs from another repository
+   `pull`        Fetch from and integrate with another repository or a local branch
+   `push`        Update remote refs along with associated objects
+
+
+## commit options <style="color:#f00">
 ```sh
-# start  a working area (see also: git help tutorial)
-start   
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
-
-# work on the current change (see also: git help everyday)
-work   
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
-
-# examine the history and state (see also: git help revisions)
-examine 
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
-
-# mark and tweak your common history
-grow 
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
-
-# collaborate in workflows (see also: git help workflows)
-fetch     Download objects and refs from another repository
-pull      Fetch from and integrate with another repository or a local branch
-push      Update remote refs along with associated objects
+$ git help commit
 ```
+## DESCRIPTION :
+   Create a new commit containing the current contents of the index and
+   the given log message describing the changes. The new commit is a
+   direct child of HEAD, usually the tip of the current branch, and the
+   branch is updated to point to it (unless no branch is associated
+   with the working tree, in which case HEAD is "detached" as described
+   in git-checkout(1)).
+       
+##   commiting  in several ways:
+
+   1. by using `git-add` (1) to incrementally "add" changes to the index
+           before using the commit command (Note: even modified files must
+           be "added");
+
+   2. by using `git-rm`(1) to remove files from the working tree and the
+           index, again before using the commit command;
+
+   3. by `listing files` as arguments to the commit command (without
+           --interactive or --patch switch), in which case the commit will
+           ignore changes staged in the index, and instead record the
+           current content of the listed files (which must already be known to Git);
+
+   4. by using the `-a` switch with the commit command to automatically
+           `"add" changes from all` known files
+## OPTIONS
+   `-m <msg>, --message=<msg>`
+     Use the given <msg> as the commit message. If multiple -m
+     options are given, their values are concatenated as separate
+     paragraphs.
+
+  `--author=<author>`
+     Override the commit author. Specify an explicit author using the
+     standard A U Thor <author@example.com> format. Otherwise
+     <author> is assumed to be a pattern and is used to search for an
+     existing commit by that author (i.e. rev-list --all -i
+     --author=<author>); the commit author is then copied from the
+     first such commit found.
+
+   `--branch`
+      Show the branch and tracking info even in short-format.
+      
+   `strip`
+      Strip leading and trailing empty lines, trailing whitespace,
+      commentary and collapse consecutive empty lines.
+   `whitespace`
+      Same as strip except #commentary is not removed.
+   `verbatim`
+      Do not change the message at all.
+
+   `scissors`
+      Same as whitespace except everything from (and including)
+      the line found below is truncated, if the message is to be edited.
+      "#" can be customized with core.commentChar.
+
 
 # GIT EXAMPLE
 ```sh
-git init           #  makes a .git in CWD
-                   # (VS-code) :  files are seen ingreen 
+git init           #  makes a .git in CWD (current Working Directory)
 
 git add .           # EVERYTHING ( to stageing for commit )
     add filename    # Specific FILE
 
 git commit -m "changes desciption" # update repo
 
-git log # see commit-hash, autor, date,description  LIST
+git log              # see commit-hash, autor, date,description  LIST
+```
+commit `ce915de2d6600514ce827fdcfd608e7e5834e708` (HEAD -> master)
+Author: Ariel Lorusso <ariellorusso@gmail.com>
+Date:   Mon Mar 25 20:53:30 2024 -0300
+
+    just a test 2
+
+commit be30eb33e4a864c5b34d3c2f1e82b6e8424b4a22
+Author: Ariel Lorusso <ariellorusso@gmail.com>
+Date:   Mon Mar 25 20:49:18 2024 -0300
+
+    just a test will delette
+
+```sh
 gut checkout commit-hash # work on that commit
+
+rm -rf .git        # Remove Repository (.git directory)
+
+```
+
+
+# VS-Code
+
+## FILE STATES  ()
+
+`1st` icon of the activity bar is the `Explorer`
+here we can see Open files and current Directory
+`files` will have marks to alert its `status` 
+```
+   ( white) : Commited
+   ( green) : Added by init command
+ A ( green) : Added
+ U ( green) : Untracked
+ M (orange) : Modified
+ D ( red  ) : Deleted
+```
+
+## COMMIT ()
+
+`3rd` icon of the activity bar is the explorer `Source Control`
+here we will see notification with number of `uncommited files`
+
+### Commits
+1.Commit 
+2.
+3.
+
+### Staged changes
+   all files adde
+
+   posible actions :
+      1. Open
+      2. Unstage chenges
+
+### Changes
+
+   Posible Actions :
+   1. Open
+   2. Discard chenges
+   3. Stage changes (will : git  )
+   
+   We can perform them `File-wise` or for `storage all changes`
+
+```sh
+this commit was made from VS-Code
+This file has comments logging files commitded and not staged
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master:
+#
+# Changes to be committed:
+#	   new file:   test_file
+#
+# Changes not staged for commit:
+#	   modified:   git.md
+#	   deleted:    test file
+#
 ```
 
 # GITHUB
