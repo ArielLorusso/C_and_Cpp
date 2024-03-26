@@ -21,39 +21,49 @@ usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
 ##  git commands 
    list of commands shown by `git help`
 
-## START REPOSITORY 
-Start  a working area (see also: git help tutorial)
-   `clone`     Clone a repository into a new directory
-   `init`      Create an empty Git repository or reinitialize an existing one
-   `config`    Set user name, email, system, etc... 
+### START REPOSITORY 
+
+   Start  a working area (see also: git help tutorial)
+<pre>
+<b style=color:#C00> clone</b>   clone a repository into a new directory
+<b style=color:#C00>  init</b>   Create an empty Git repository or reinitialize an existing one
+<b style=color:#C00>config</b>   Set user name, email, system, etc... 
       git config --global user.email "you@example.com"
       git config --global user.name "Your Name"
+</pre>   
+  
 
-## WORK   
+### WORK   
 Work on the current change (see also: `git help everyday`)
-   `add`       Add file contents to the index
-   `mv`        Move or rename a file, a directory, or a symlink
-   `restore`   Restore working tree files
-   `rm`        Remove files from the working tree and from the index
+<pre>
+<b style=color:#C00>add</b>       Add file contents to the index
+<b style=color:#C00>mv</b>        Move or rename a file, a directory, or a symlink
+<b style=color:#C00>restore</b>   Restore working tree files
+<b style=color:#C00>rm</b>        Remove files from the working tree and from the index
+</pre>   
 
-## EXAMINE 
+### EXAMINE 
 Examine the history and state (see also: git help revisions)
-   `log`       Show commit logs
-   `bisect`    Use binary search to find the commit that introduced a bug
-   `diff`      Show changes between commits, commit and working tree, etc
-   `grep`      Print lines matching a pattern
-   `show`      Show various types of objects
-   `status`    Show the working tree status
+<pre>
+<b style=color:#C00>log</b>       Show commit logs
+<b style=color:#C00>bisect</b>    Use binary search to find the commit that introduced a bug
+<b style=color:#C00>diff</b>      Show changes between commits, commit and working tree, etc
+<b style=color:#C00>grep</b>      Print lines matching a pattern
+<b style=color:#C00>show</b>      Show various types of objects
+<b style=color:#C00>status</b>    Show the working tree status
+</pre>   
 
-## EDIT
+### EDIT
 Grow mark and tweak your common history
-   `commit`    Record changes to the repository
-   `branch`    List, create, or delete branches
-   `switch`    Switch branches
-   `merge`     Join two or more development histories together
-   `reset`     Reset current HEAD to the specified state
-   `rebase`    Reapply commits on top of another base tip
-   `tag`       Create, list, delete or verify a tag object signed with GPG
+<pre>
+<b style=color:#C00>commit</b>    Record changes to the repository
+<b style=color:#C00>branch</b>    List, create, or delete branches
+<b style=color:#C00>switch</b>    Switch branches
+<b style=color:#C00>merge</b>     Join two or more development histories together
+<b style=color:#C00>reset</b>     Reset current HEAD to the specified state
+<b style=color:#C00>rebase</b>    Reapply commits on top of another base tip
+<b style=color:#C00>tag</b>       Create, list, delete or verify a tag object signed with GPG
+</pre>   
 
 ## WORKFLOW
 collaborate in a workflow (see also: `git help workflows`)
