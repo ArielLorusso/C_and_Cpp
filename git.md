@@ -122,40 +122,45 @@ $ git help commit
 
 
 # GIT EXAMPLE
-```sh
-git init           #  makes a .git in CWD (current Working Directory)
 
-git add .           # EVERYTHING ( to stageing for commit )
-    add filename    # Specific FILE
+   ```sh
+   git init           #  makes a .git in CWD (current Working Directory)
 
-git commit -m "changes desciption" # update repo
+   git add .           # EVERYTHING ( to stageing for commit )
+      add filename    # Specific FILE
 
-git log              # see commit-hash, autor, date,description  LIST
+   git commit -m "changes desciption" # update repo
 
+   git log              # see commit-hash, autor, date,description  LIST
+   ```
+   ```js
+   commit `ce915de2d6600514ce827fdcfd608e7e5834e708` (HEAD -> master)
+   Author: Ariel Lorusso <ariellorusso@gmail.com>
+   Date:   Mon Mar 25 20:53:30 2024 -0300
 
-```
-commit `ce915de2d6600514ce827fdcfd608e7e5834e708` (HEAD -> master)
-Author: Ariel Lorusso <ariellorusso@gmail.com>
-Date:   Mon Mar 25 20:53:30 2024 -0300
+      just a test 2
 
-    just a test 2
+   commit be30eb33e4a864c5b34d3c2f1e82b6e8424b4a22
+   Author: Ariel Lorusso <ariellorusso@gmail.com>
+   Date:   Mon Mar 25 20:49:18 2024 -0300
 
-commit be30eb33e4a864c5b34d3c2f1e82b6e8424b4a22
-Author: Ariel Lorusso <ariellorusso@gmail.com>
-Date:   Mon Mar 25 20:49:18 2024 -0300
-
-    just a test will delette
-
-```sh
-gut checkout commit-hash # work on that commit
-
-rm -rf .git        # Remove Repository (.git directory)
+      just a test will delette
+   ```
+   `ce915de2d6600514ce827fdcfd608e7e5834e708` this is the `commit-hash`
+   will be required to work with that specific commit
 
 
-git show --textconv : new_file   #
-git ls-tree -l HEAD -- /home/ariel/Desktop/C_and_C++/ #
-git cat-file -s 2ad3e3fbe1d5a2249ab821eb64f30c40327fd27c  #
-```
+   ```sh
+   git checkout commit-hash # work on that commit
+   git show     commit-hash # see file-changes that commit
+
+   rm -rf .git        # Remove Repository (.git directory)
+
+
+   git show --textconv : new_file   #
+   git ls-tree -l HEAD -- /home/ariel/Desktop/C_and_C++/ #
+   git cat-file -s 2ad3e3fbe1d5a2249ab821eb64f30c40327fd27c  #
+   ```
 
 
 # VS-Code
@@ -198,18 +203,19 @@ unstaged changes wont be commited
 user should make a new commit if they desire to keep those
 
 ### Staged changes
-   all files adde
+   all files added will save to commit
 
-   posible actions :
+   Posible actions :
    1. Open
-   2. Unstage chenges
+   2. Unstage chenges 
 
-### Changes
+### Changes   
+   (unstaged) all files hire wont be save to commit
 
    Posible Actions :
    1. Open
    2. Discard chenges
-   3. Stage changes (will : git  )
+   3. Stage changes (will : `git add` )
    
    We can perform them `File-wise` or for `storage all changes`
 
@@ -230,9 +236,28 @@ This file has comments logging files commitded and not staged
 #	   deleted:    test file
 #
 ```
+## GitHub
+
+1. `Click` on Source Control's  3rd icon `Publish to GitHub`
+2. VS-Code will propt usto `login to giuhub`
+3. make a `commit` as explained before
+4. `Click` on Source Control's  3rd icon `Push commit`  (it changed)
+
+`BEWARE step 3` we `DONT` want to make a `PULL` under any sircunstance
+that will lead to our local repository being lost... we `should PUSH`
 
 # GITHUB
+
+## wellcome "tutorial"
 ```sh
+# Quick setup — if you’ve done this kind of thing before
+HTTPS  https://github.com/ArielLorusso/C_C-.git
+SSH    git@github.com:ArielLorusso/C_C-.git
+
+# Get started by creating a new file  or uploading an existing file. 
+# We recommend every repository include a README, LICENSE, and .gitignore.
+
+# …or create a new repository on the command line
 echo "# C_Projecs" >> README.md
 git init
 git add README.md
@@ -240,5 +265,13 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/ArielLorusso/C_Projecs.git
 git push -u origin main
+
+# …or push an existing repository from the command line
+git remote add origin https://github.com/ArielLorusso/C_C-.git
+git branch -M main
+git push -u origin main
+
+#…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 ```
 
