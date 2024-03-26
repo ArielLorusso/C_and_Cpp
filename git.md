@@ -24,23 +24,23 @@ usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
 ### START REPOSITORY 
 
    Start  a working area (see also: git help tutorial)
-<pre>
-<b style=color:#C00> clone</b>   clone a repository into a new directory
-<b style=color:#C00>  init</b>   Create an empty Git repository or reinitialize an existing one
-<b style=color:#C00>config</b>   Set user name, email, system, etc... 
+```sh
+ clone      clone a repository into a new directory
+  init      Create an empty Git repository or reinitialize an existing one
+config      Set user name, email, system, etc... 
       git config --global user.email "you@example.com"
       git config --global user.name "Your Name"
-</pre>   
+```
   
 
 ### WORK   
 Work on the current change (see also: `git help everyday`)
-<pre>
-<b style=color:#C00>add</b>       Add file contents to the index
-<b style=color:#C00>mv</b>        Move or rename a file, a directory, or a symlink
-<b style=color:#C00>restore</b>   Restore working tree files
-<b style=color:#C00>rm</b>        Remove files from the working tree and from the index
-</pre>   
+```sh
+add          Add file contents to the index
+mv           Move or rename a file, a directory, or a symlink
+restore      Restore working tree files
+rm           Remove files from the working tree and from the index
+```   
 
 ### EXAMINE 
 Examine the history and state (see also: git help revisions)
