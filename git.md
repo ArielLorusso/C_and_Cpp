@@ -131,6 +131,8 @@ git add .           # EVERYTHING ( to stageing for commit )
 git commit -m "changes desciption" # update repo
 
 git log              # see commit-hash, autor, date,description  LIST
+
+
 ```
 commit `ce915de2d6600514ce827fdcfd608e7e5834e708` (HEAD -> master)
 Author: Ariel Lorusso <ariellorusso@gmail.com>
@@ -149,6 +151,10 @@ gut checkout commit-hash # work on that commit
 
 rm -rf .git        # Remove Repository (.git directory)
 
+
+git show --textconv : new_file   #
+git ls-tree -l HEAD -- /home/ariel/Desktop/C_and_C++/ #
+git cat-file -s 2ad3e3fbe1d5a2249ab821eb64f30c40327fd27c  #
 ```
 
 
@@ -168,22 +174,35 @@ here we can see Open files and current Directory
  D ( red  ) : Deleted
 ```
 
+SOURCE CONTROL
+1.Repository
+2.Branch
+3.Publish to GitHub
+4.Commit
+5.Refresh
+6.More ( Pull, Push, Clone, Checkout, Fetch)
+
 ## COMMIT ()
 
 `3rd` icon of the activity bar is the explorer `Source Control`
 here we will see notification with number of `uncommited files`
 
 ### Commits
-1.Commit 
-2.
-3.
+
+1. Commit with the `blue button`
+2. `Write a log` for the whole commit ()
+3. click `Accept commit change` in the editor actions (same that splits view)
+
+files can have both `staged changes` and `unstaged changes` 
+unstaged changes wont be commited
+user should make a new commit if they desire to keep those
 
 ### Staged changes
    all files adde
 
    posible actions :
-      1. Open
-      2. Unstage chenges
+   1. Open
+   2. Unstage chenges
 
 ### Changes
 
